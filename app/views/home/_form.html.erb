@@ -1,0 +1,32 @@
+<% form_with(model: product, local: true, class: "w-25") do |form| %>
+    <%# <% if product.errors.any? %> %>
+        <%# <div id="error_explanation"> %>
+            <%# <h2><%= pluralize(product.errors.cont, "error") %> prohibited this product from being saved:</h2> %>
+
+            <%# <ul> %>
+                <%# <% product.errors.full_messages.each do |message| %> %>
+                <%# <li><%= message %></li> %>
+            <%# </ul> %>
+        <%# </div> %>
+    <%# <% end %> %>
+
+    <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :description %>
+        <%= form.text_area :description, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :price %>
+        <%= form.number_field :price, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.submit controller.action_name.capitalize + " Product", class: "btn btn-primary" %>
+    </div>
+<% end %>
+

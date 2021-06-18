@@ -1,0 +1,196 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// :root {
+//     --color-text: #3a3a3a;
+//     --color-text-rgb: 58, 58, 58;
+//     --color-body-text: #333232;
+//     --color-sale-text: #EA0606;
+//     --color-small-button-text-border: #3a3a3a;
+//     --color-text-field: #ffffff;
+//     --color-text-field-text: #000000;
+//     --color-text-field-text-rgb: 0, 0, 0;
+//     --color-btn-primary: #3a3a3a;
+//     --color-btn-primary-darker: #212121;
+//     --color-btn-primary-text: #ffffff;
+//     --color-blankstate: rgba(51, 50, 50, 0.35);
+//     --color-blankstate-border: rgba(51, 50, 50, 0.2);
+//     --color-blankstate-background: rgba(51, 50, 50, 0.1);
+//     --color-text-focus: #606060;
+//     --color-overlay-text-focus: #e6e6e6;
+//     --color-btn-primary-focus: #606060;
+//     --color-btn-social-focus: #d2d2d2;
+//     --color-small-button-text-border-focus: #606060;
+//     --predictive-search-focus: #f2f2f2;
+//     --color-body: #ffffff;
+//     --color-bg: #ffffff;
+//     --color-bg-rgb: 255, 255, 255;
+//     --color-bg-alt: rgba(51, 50, 50, 0.05);
+//     --color-bg-currency-selector: rgba(51, 50, 50, 0.2);
+//     --color-overlay-title-text: #ffffff;
+//     --color-image-overlay: #685858;
+//     --color-image-overlay-rgb: 104, 88, 88;
+//     --opacity-image-overlay: 0.4;
+//     --hover-overlay-opacity: 0.8;
+//     --color-border: #ebebeb;
+//     --color-border-form: #cccccc;
+//     --color-border-form-darker: #b3b3b3;
+//     --svg-select-icon: url(//cdn.shopify.com/s/files/1/0571/1252/7038/t/1/assets/ico-select.svg?v=2900367270910467858);
+//     --slick-img-url: url(//cdn.shopify.com/s/files/1/0571/1252/7038/t/1/assets/ajax-loader.gif?v=4135686330247201572);
+//     --font-weight-body--bold: 700;
+//     --font-weight-body--bolder: 700;
+//     --font-stack-header: "New York", Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+//     --font-style-header: normal;
+//     --font-weight-header: 400;
+//     --font-stack-body: "New York", Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+//     --font-style-body: normal;
+//     --font-weight-body: 400;
+//     --font-size-header: 26;
+//     --font-size-base: 15;
+//     --font-h1-desktop: 35;
+//     --font-h1-mobile: 32;
+//     --font-h2-desktop: 20;
+//     --font-h2-mobile: 18;
+//     --font-h3-mobile: 20;
+//     --font-h4-desktop: 17;
+//     --font-h4-mobile: 15;
+//     --font-h5-desktop: 15;
+//     --font-h5-mobile: 13;
+//     --font-h6-desktop: 14;
+//     --font-h6-mobile: 12;
+//     --font-mega-title-large-desktop: 65;
+//     --font-rich-text-large: 17;
+//     --font-rich-text-small: 13;
+//     --color-video-bg: #f2f2f2;
+//     --global-color-image-loader-primary: rgba(58, 58, 58, 0.06);
+//     --global-color-image-loader-secondary: rgba(58, 58, 58, 0.12);
+// }
+
+// color: #eae706 (50% OFF WHILE SUPPLIES LAST - FREE SHIPPING EVERY PRODUCTS)
+
+// Universal tags
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.announcement__bar {
+  background-color: #3a3a3a;
+  text-align: center;
+  padding: 16px;
+
+  .announcement__bar__message {
+    color: #eae706;
+    margin: 0;
+  }
+}
+
+#navbar {
+  //   position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  align-items: center;
+  padding: 20px 50px;
+
+  .navbar__logo {
+    // font-size: var(--font-medium);
+    // font-weight: var(--weight-semi-bold);
+
+    img {
+      max-width: 130px;
+    }
+    // color: var(--color-accent);
+  }
+
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .navbar__menu__item {
+      padding: 8px 12px;
+      margin: 0 4px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  }
+
+  .navbar__icons {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .navbar__icon {
+      padding: 8px 12px;
+
+      img {
+        width: 22px;
+      }
+    }
+  }
+
+  .navbar__toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 26px;
+    font-size: 24px;
+    display: none;
+  }
+}
+
+#home {
+  //   background: url(/images/health.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/health.jpeg);
+  background-repeat: no-repeat;
+  //   background-size: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  position: relative;
+  width: 100%;
+  height: 84vh;
+  padding: 20vh 0;
+  text-align: center;
+
+  .section__container {
+    color: rgba(255, 255, 255, 0.8);
+
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 28px;
+    }
+    // text-shadow: 0 0 4px rgba(0,0,0,0.4);
+  }
+}
+
+#footer {
+  background-color: #f6f6f6;
+  padding: 50px 0;
+
+  .policies {
+    display: flex;
+    justify-content: center;
+
+    .policy {
+      padding: 8px 12px;
+    }
+  }
+}

@@ -1,3 +1,28 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+#collection {
+    display: flex;
+    flex-wrap: wrap;
+    color: #3a3a3a;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+  
+    .collection__container {
+      width: 140px;
+      margin: 10px;
+      border: 2px solid #3a3a3a;
+    }
+  
+    h3 {
+      font-size: 15px;
+    }
+  
+    p {
+      font-size: 13px;
+    }
+  }

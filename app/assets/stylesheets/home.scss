@@ -197,11 +197,11 @@
 
 ///////////////////////////////////
 
-// Universal tags 
+// Universal tags
 
 * {
   box-sizing: border-box;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 ul {
@@ -264,7 +264,6 @@ ul {
       .navbar__icon {
         img {
           width: 20px;
-          
         }
 
         button {
@@ -327,7 +326,6 @@ ul {
   }
 }
 
-
 #about {
   .about__container {
     padding: 60px 22px 0 22px;
@@ -337,10 +335,9 @@ ul {
   }
 
   .feature__container {
-   
     img {
       width: 100%;
-    //   height: 180px;
+      //   height: 180px;
       border-radius: 5px;
     }
   }
@@ -354,6 +351,30 @@ ul {
   }
 }
 
+// #collection {
+//   display: flex;
+//   flex-wrap: wrap;
+//   color: #3a3a3a;
+//   width: 100%;
+//   margin: 0 auto;
+//   justify-content: center;
+//   text-align: center;
+
+//   .collection__container {
+//     width: 140px;
+//     margin: 10px;
+//     border: 2px solid #3a3a3a;
+//   }
+
+//   h3 {
+//     font-size: 15px;
+//   }
+
+//   p {
+//     font-size: 13px;
+//   }
+// }
+
 #footer {
   .footer__container {
     background-color: #f6f6f6;
@@ -361,7 +382,6 @@ ul {
   }
 
   .policies {
-
     .policy {
       padding: 8px 12px;
 
@@ -373,6 +393,20 @@ ul {
       a:hover {
         color: #808080;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #header {
+    .navbar__menu {
+      display: inline;
+    }
+  }
+
+  #about {
+    .about__container {
+      display: flex;
     }
   }
 }

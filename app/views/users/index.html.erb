@@ -1,75 +1,31 @@
-<%# 
+<div class="form__box">
+    <form action="" class="form__container">
 
-    <form action="">
+        <h1>Login</h1>
 
-    <h1>Create Account</h1>
-      <div class="first__name__box">
-        <label for="f-name">First Name</label>
-        <input
-          type="text"
-          name="f-name"
-          id="f-name"
-          required
-        />
-      </div>
+        <div class="email__container">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                required
+            />
+        </div>
 
-      <div class="last__name__box">
-        <label for="l-name">Last Name</label>
-        <input
-          type="text"
-          name="l-name"
-          id="l-name"
-          required
-        />
-      </div>
+        <div class="passward__container">
+            <label for="email">Password</label>
+            <input
+                type="password"
+                name="password"
+                id="password"
+                required
+            />
+        </div>
 
-      <div class="email__box">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required
-        />
-      </div>
-
-      <div class="password__box">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-        />
-      </div>
-
-      <button type="submit" name="submit">CREATE</button>
-    </form> %>
-
-    <h1>Log In</h1>
-
-<%= form_with model:@user, local: true do |form| %>
-    <div class="field">
-        <%= form.label :first_name %>
-        <%= form.text_field :first_name %>
-    </div>
-
-    <div class="field">
-        <%= form.label :last_name %>
-        <%= form.text_field :last_name %>
-    </div>
-
-    <div class="field">
-        <%= form.label :email %>
-        <%= form.text_field :email %>
-    </div>
-
-    <div class="password">
-        <%= form.label :password %>
-        <%= form.text_field :password %>
-    </div>
-
-    <div>
-        <%= form.submit "SIGN IN", class: "btn-submit" %>
-    </div>
-<% end %>
+        <div class="btn__container">    
+            <button type="submit" name="submit" class="btn__form">SIGN IN</button>
+            <a href="create">Create account</a>
+        </div>
+    </form>
+</div>

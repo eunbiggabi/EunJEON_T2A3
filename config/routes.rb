@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get "/characters", to: "characters#index"
   get "/characters/:id", to: "characters#show"
   get "users/login", to: "users#index"
+  get "users/create", to: "users#create"
   resource :users, only: [:index, :show]
 end

@@ -1,16 +1,19 @@
-
-
 <section id="product">
     <div class="product__container">
-        <h1><%= @character[:name] %></h1>
-        <p><%= @character[:height] %></p>
-        <p><%= @character[:mass] %></p>
-        <p><%= @character[:hair_color] %></p>
-        <p><%= @character[:skin_color] %></p>
-        <p><%= @character[:eye_color] %></p>
-        <p><%= @character[:birth_year] %></p>
-        <% if @character[:gender] != "n/a" %>  
-            <p><%= @character[:gender] %></p>
-        <% end %>
+        <div class="product__img__container">
+            <img src="<%= @character[:pic] %>" alt="character-image">
+            <h3><%= @character[:name].capitalize %></h3>
+        </div>
+        <div class="product__detail__container">
+            <p><%= @character[:height] %></p>
+            <p><%= @character[:mass] %></p>
+            <p><%= @character[:hair_color] %></p>
+            <p><%= @character[:skin_color] %></p>
+            <p><%= @character[:eye_color] %></p>
+            <p><%= @character[:birth_year] %></p>
+            <% if @character[:gender] != "n/a" %>  
+                <p><%= @character[:gender] %></p>
+            <% end %>
+        </div>
     </div>
 </section>

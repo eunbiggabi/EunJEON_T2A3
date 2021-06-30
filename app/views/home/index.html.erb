@@ -1,3 +1,37 @@
+<section id="home">
+    <div class="home__container">
+        <h1 class="home__title">Body Helper</h1>
+        <p class="home__description">Get back to what you love</p>
+        <button class="home__contact" data-link="#contact">SHOP NOW</button>
+    </div>
+</section>
+
+<section id="about">
+    <div class="about__container">
+        <div class="feature__container">
+            <img src="/images/about.jpeg" alt="about-image">
+        </div>
+        <div class="text__container">
+            <h2>We're On A Mission</h2>
+            <p>We want to help over 10,000 people back to healthy life and future through providing our effective and functional products</p>
+        </div>
+    </div>
+</section>
+
 <section id="collection">
-    <h1>This is Yield area~~!</h1>
+    <% @characters.each do |character| %>
+        <div class="collection__container">
+            <h3><%= character[:name] %></h3>
+            <p><%= character[:height] %></p>
+            <p><%= character[:mass] %></p>
+            <p><%= character[:hair_color] %></p>
+            <p><%= character[:skin_color] %></p>
+            <p><%= character[:eye_color] %></p>
+            <p><%= character[:birth_year] %></p>
+            <% if character[:gender] != "n/a" %>  
+                <p><%= character[:gender] %></p>
+            <% end %>
+            <a href="/products/<%= character[:id] %>">Show</a>
+        </div>
+    <% end %>
 </section>

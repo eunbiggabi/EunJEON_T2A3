@@ -2,28 +2,18 @@
 <div class="form__box">
     <form action="" class="form__container">
         <h1>Create Account</h1>
-        <div class="name-box">
-            <label for="f_name">Username</label>
+        <div class="username-box">
+            <label for="username">Username</label>
             <input
                 type="text"
-                name="f_name"
-                id="f_name"
-                required
-            />
-        </div>
-
-        <div class="name-box">
-            <label for="l_name">Email</label>
-            <input
-                type="text"
-                name="l_name"
-                id="l_name"
+                name="username"
+                id="username"
                 required
             />
         </div>
 
         <div class="email-box">
-            <label for="email">Password (8 characters minimum)</label>
+            <label for="email">Email</label>
             <input
                 type="email"
                 name="email"
@@ -32,8 +22,8 @@
             />
         </div>
 
-        <div class="email-box">
-            <label for="email">Password confirmation</label>
+        <div class="password-box">
+            <label for="password">Password (8 characters minimum)</label>
             <input
                 type="password"
                 name="password"
@@ -42,8 +32,19 @@
             />
         </div>
 
-        <div class="btn__container">    
-            <button type="submit" name="submit" class="btn__form">CREATE</button>
+        <div class="password-box">
+            <label for="password_confirm">Password confirmation</label>
+            <input
+                type="password"
+                name="password_confirm"
+                id="password_confirm"
+                required
+            />
         </div>
+
+        <div class="btn__container">    
+            <a href="profile"><button type="submit" name="submit" class="btn__form">CREATE</button></a>
+        </div>
+
     </form>
 </div>

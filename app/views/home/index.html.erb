@@ -2,7 +2,9 @@
     <div class="home__container">
         <h1 class="home__title">Body Helper</h1>
         <p class="home__description">Get back to what you love</p>
-        <button class="home__contact" data-link="#contact">SHOP NOW</button>
+        <a href="/products">
+            <button class="home__contact" data-link="#contact">SHOP NOW</button>
+        </a>
     </div>
 </section>
 
@@ -18,20 +20,31 @@
     </div>
 </section>
 
+<section id="sale">
+    <div class="sale__container">
+        <h1 class="sale__title">Up To 40% OFF</h1>
+        <p class="sale__description">SELECT PRODUCT</p>
+        <p class="sale__description">& FREE SHIPING</p>
+    </div>
+</section>
+
 <section id="collection">
-    <% @characters.each do |character| %>
-        <div class="collection__container">
-            <h3><%= character[:name] %></h3>
-            <p><%= character[:height] %></p>
-            <p><%= character[:mass] %></p>
-            <p><%= character[:hair_color] %></p>
-            <p><%= character[:skin_color] %></p>
-            <p><%= character[:eye_color] %></p>
-            <p><%= character[:birth_year] %></p>
-            <% if character[:gender] != "n/a" %>  
-                <p><%= character[:gender] %></p>
+    <div class="colletion__container">
+        <h1>VIEW ALL COLLECTIONS</h1>
+        <div class="card__container">
+            <% @products.each do |product| %>
+            <div class="card" style="width: 18rem;">
+                <a href="/products/<%= product[:id] %>">
+                <img class="card-img" src="images/hand-massager.jpeg" alt="Hand Massager Image">
+                <div class="card-body">
+                <h5 class="card-title"><%= product.name %></h5>
+                <p class="card-text">from <%= product.discount_price %></p>
+                <p class="card-text-cross"><%= product.price %></p>
+                <p class="card-text-icon">SALE</p>
+                </div>
+                </a>
+            </div>
             <% end %>
-            <a href="/products/<%= character[:id] %>">Show</a>
         </div>
-    <% end %>
+    </div>
 </section>

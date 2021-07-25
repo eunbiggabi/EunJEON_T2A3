@@ -1,8 +1,9 @@
+require 'product'
+
 class HomeController < ApplicationController
 
-    before_action :characters
-
     def index
+        @products = Product.all
     end
 
     def about
